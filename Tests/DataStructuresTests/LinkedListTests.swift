@@ -1,7 +1,7 @@
 import XCTest
 @testable import LinkedList
 
-final class DataStructuresTests: XCTestCase {
+final class LinkedListTests: XCTestCase {
     
     func testLinkedList() {
 //
