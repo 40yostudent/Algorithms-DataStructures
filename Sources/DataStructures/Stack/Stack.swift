@@ -65,7 +65,7 @@ public class Stack<Key> {
     
     /// Deletion method for the Stack
     ///
-    /// Always delete new values fromt the top of the Stack
+    /// Always delete new values from the top of the Stack
     /// - Complexity: O(1)
     /// - Parameter times: how many elements will be deleted
     /// - Returns: the last value deleted
