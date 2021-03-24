@@ -41,6 +41,7 @@ final class QueueTests: XCTestCase {
         intQueue.append(contentsOf: anotherIntQueue)
         XCTAssertTrue(anotherIntQueue.isEmpty)
         XCTAssertEqual(intQueue.first, 5)
+        XCTAssertEqual(intQueue.last, -5)
     }
 
     static var allTests = [
