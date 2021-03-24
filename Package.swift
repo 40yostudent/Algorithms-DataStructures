@@ -7,10 +7,9 @@ let package = Package(
     name: "Algorithms-DataStructures",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-//        .library(
-//            name: "LinkedList",
-//            type: .dynamic,
-//            targets: ["LinkedList"]),
+        .library(
+            name: "LinkedList",
+            targets: ["LinkedList"]),
         .library(
             name: "Stack",
             targets: ["Stack"]),
@@ -31,7 +30,7 @@ let package = Package(
             path: "Sources/DataStructures/LinkedList"),
         .target(
             name: "Stack",
-            dependencies: ["LinkedList"],
+            dependencies: [],
             path: "Sources/DataStructures/Stack"),
         .target(
             name: "Queue",
