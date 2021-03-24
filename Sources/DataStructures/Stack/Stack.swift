@@ -1,5 +1,3 @@
-import LinkedList
-
 /**
  Stack - Data Structure
  
@@ -7,7 +5,7 @@ import LinkedList
  Think of it as a stack of dishes or coins, where the only visible entry is the first on top, and any attempt to read other entries will result in
  popping out entries from the stack.
  
- Implemented as described on the Cormen's book, there are 5 available operations: top(), pop(\_: Int), push(\_: Key), isEmpty: Bool, append(contentsOf: Stack<Key>)
+ Implemented as described on the Cormen's book, there are 5 available operations: top(), pop(\_: Int), push(\_: Key), isEmpty: Bool, append(contentsOf: Sequence<Key>)
  
  The primary traits of the Stack data structure are:
  * The element consumed by a cancelling operation is predetermined, and is the last inserted (LIFO, Last In First Out)
@@ -18,7 +16,7 @@ import LinkedList
  Considering its storage is implemented as a class, this object would behave as a reference type even if implemented as a struct.
  For this reason, a class is the obvious choice.
   
- - Warning: Can be traversed only once. Traversing the elements of this data structure is a consuming operation, and will result in an empty stack
+ - Warning: Can be traversed only once. Traversing the elements of this data structure is a consuming operation, and will result in an empty stack.
  */
 public class Stack<Key> {
     
@@ -79,17 +77,17 @@ public class Stack<Key> {
         return popped
     }
     
-    /// Append the content of another stack
+    /// Append the content of another sequence
     ///
-    /// Convenience method to append another list, as a union operation
-    /// - Parameter list: the list that will be appended
+    /// Convenience method to append another sequence, as a union operation
+    /// - Parameter sequence: the list that will be appended
     /// - Precondition: appending a Stack to itself would result in an infinite loop
-    /// - Warning: this consumes the appended list
-    public func append<T: Sequence>(contentsOf list: T) where T.Element == Key {
-        guard self !== list as AnyObject else {
+    /// - Warning: this could consume the appended sequence
+    public func append<T: Sequence>(contentsOf sequence: T) where T.Element == Key {
+        guard self !== sequence as AnyObject else {
             preconditionFailure("Appending a Stack to itself would result in an infinite loop")
         }
-        for key in list {
+        for key in sequence {
             self.push(key)
         }
     }
