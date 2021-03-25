@@ -5,7 +5,7 @@
 An opinionated project about how to implement some important Algorithms and Data Structures in Swift, written for humans, not processors (should compile eventually). Released for public domain and made for educational academic purposes.
 Every topic has its own target folder and an Xcode Playground included as executable documentation. Also, documentation is provided md-formatted in every file where it makes sense, as well as tests for every testable entity.
 
-### Works with:
+### Works with
 
 * Swift 5.3 and above
 * untested in Linux (will test it)
