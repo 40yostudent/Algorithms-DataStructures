@@ -31,3 +31,4 @@ I have had this project in mind for a long time, since I discovered the great [b
 ### Contact
 
 [@40YOStudent on Twitter](https://twitter.com/40YOStudent)
+[email](mailto:a40yostudent@icloud.com)
