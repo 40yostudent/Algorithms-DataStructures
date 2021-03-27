@@ -18,7 +18,6 @@ extension LinkedList: BidirectionalCollection {
         i - 1
     }
     
-    // TODO: change to go fatalerror for index out of bound, so get rid of optionals
     public subscript(position: Index) -> Key {
         guard position < head.index else {
             preconditionFailure("Index out of range")
@@ -28,6 +27,13 @@ extension LinkedList: BidirectionalCollection {
             node = node.next
         }
         return node.key!
+    }
+    
+    public subscript(bounds: Range<Index>) -> Slice<LinkedList<Key>> {
+        guard bounds.lowerBound >= startIndex && bounds.upperBound < endIndex else {
+            preconditionFailure("Index out of range")
+        }
+        return Slice(base: self, bounds: bounds)
     }
     
 }

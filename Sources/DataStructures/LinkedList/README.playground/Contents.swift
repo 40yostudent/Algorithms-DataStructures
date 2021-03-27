@@ -5,7 +5,7 @@
 //: ![Linked List README page 4](Page4.png "Linked List README page 4")
 import LinkedList
 
-let abcde = LinkedList<String>()
+var abcde = LinkedList<String>()
 abcde.insert("a")
     .insert("b")
     .insert("c")
@@ -20,7 +20,10 @@ for letter in abcde {
     print(letter)
 }
 
-let newArray = [1, 2, 3, 4, 5]
+var newArray = [1, 2, 3, 4, 5]
 for number in newArray {
     print(number)
 }
+
+print(type(of: abcde.reversed()))
+print(abcde)
