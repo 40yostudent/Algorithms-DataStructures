@@ -26,4 +26,6 @@ for number in newArray {
 }
 
 print(type(of: abcde.reversed()))
-print(abcde)
+for letter in abcde[..<3] {
+    print(letter)
+}

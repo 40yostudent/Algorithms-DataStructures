@@ -18,4 +18,12 @@ class Node_DLLIndexed<Key> {
         self.prev = self
         self.index = 0 // this is the value of endIndex
     }
+    
+    @discardableResult
+    public func delete() -> Node_DLLIndexed {
+        let node = self
+        node.prev.next = node.next
+        node.next.prev = node.prev
+        return node
+    }
 }
